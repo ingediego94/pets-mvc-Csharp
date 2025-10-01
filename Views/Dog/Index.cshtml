@@ -1,0 +1,37 @@
+@model IEnumerable<practica_Mvc.Models.Dog>
+
+<h1>List Of Dogs</h1>
+
+
+<table class="table table-striped">
+    
+    @* table header *@
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">BREED</th>
+        <th scope="col">GENDER</th>
+        <th scope="col">NAME</th>
+        <th scope="col">AGE</th>
+        <th scope="col">SICK</th>
+        <th scope="col">ACTIONS</th>
+    </tr>
+    </thead>
+    
+    @* Table body *@
+    <tbody>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.Id</td>
+            <td>@d.Breed</td>
+            <td>@d.Gender</td>
+            <td>@d.Name</td>
+            <td>@d.Age</td>
+            <td>@d.Sick</td>
+            <td><button type="button" class="btn btn-warning">Edit</button></td><td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+    }
+
+    </tbody>
+</table>
